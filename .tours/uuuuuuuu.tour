@@ -1,0 +1,87 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "优先级",
+  "steps": [
+    {
+      "file": "packages/react-reconciler/src/ReactFiberLane.js",
+      "description": "LanePriority Lane优先级定义 与fiber构造过程相关的优先级都使用这个\n\n最高优先级为SyncLanePriority对应的车道为SyncLane = 0b0000000000000000000000000000001",
+      "line": 46
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberLane.js",
+      "description": "定义了18 种车道(Lane/Lanes)变量, 每一个变量占有 1 个或多个比特位, 分别定义为Lane和Lanes类型.",
+      "line": 74
+    },
+    {
+      "file": "packages/scheduler/src/SchedulerPriorities.js",
+      "description": "SchedulerPriority 调度优先级  任务调度相关使用",
+      "line": 10,
+      "selection": {
+        "start": {
+          "line": 10,
+          "character": 13
+        },
+        "end": {
+          "line": 10,
+          "character": 26
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/SchedulerWithReactIntegration.new.js",
+      "description": "ReactPriorityLevel 与 SchedulerPriority保持一致的（比如数量 设置命名 区别在于数值\n\nLanePriority与 SchedulerPriority 通过ReactPriorityLevel进行转换",
+      "line": 65,
+      "selection": {
+        "start": {
+          "line": 65,
+          "character": 33
+        },
+        "end": {
+          "line": 65,
+          "character": 51
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/SchedulerWithReactIntegration.new.js",
+      "description": "getCurrentPriorityLevel   reactPriorityToSchedulerPriority  这些就是几种优先级之间互相转化\n\n主要还是供requestUpdateLane 调用",
+      "line": 93,
+      "selection": {
+        "start": {
+          "line": 110,
+          "character": 10
+        },
+        "end": {
+          "line": 110,
+          "character": 42
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "异步进入调度阶段传入的第二个参数lane 基本都是通过调用这个函数得到fiber构造的优先级的（暂时这么理解）\n\n？？？ 现在这个函数的逻辑不太理解",
+      "line": 392
+    },
+    {
+      "file": "packages/react-reconciler/src/SchedulerWithReactIntegration.new.js",
+      "description": "把 SchedulerPriority 转换成 ReactPriorityLevel",
+      "line": 93,
+      "selection": {
+        "start": {
+          "line": 93,
+          "character": 17
+        },
+        "end": {
+          "line": 93,
+          "character": 40
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/SchedulerWithReactIntegration.new.js",
+      "description": "把 ReactPriorityLevel 转换成 SchedulerPriority",
+      "line": 110
+    }
+  ],
+  "ref": "v17.0.2"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Fiber结构",
+  "steps": [
+    {
+      "file": "packages/react-reconciler/src/ReactFiber.old.js",
+      "description": "Fiber节点属性结构\n====================\nthis.tag = tag;\n// key属性\nthis.key = key;\n// 大部分情况同type，某些情况不同，比如FunctionComponent使用React.memo包裹\nthis.elementType = null;\n// 对于 FunctionComponent，指函数本身，对于ClassComponent，指class，对于HostComponent，指DOM节点tagName\nthis.type = null;\n// Fiber对应的真实DOM节点\nthis.stateNode = null;\n\n// 保存本次更新造成的状态改变相关信息\n\nthis.pendingProps = pendingProps;\nthis.memoizedProps = null;\nthis.updateQueue = null;\nthis.memoizedState = null;\nthis.dependencies = null;\n\nthis.mode = mode;\n\n// 保存本次更新会造成的DOM操作\n\nthis.effectTag = NoEffect;\nthis.nextEffect = null;\n\nthis.firstEffect = null;\nthis.lastEffect = null;\n\n// 调度优先级相关\n\nthis.lanes = NoLanes;\nthis.childLanes = NoLanes;",
+      "line": 116
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberRoot.old.js",
+      "description": "fiber 节点结构",
+      "line": 29
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberLane.js",
+      "description": "fiber 优先级模型  Lane",
+      "line": 73
+    }
+  ],
+  "ref": "v17.0.2"
+}

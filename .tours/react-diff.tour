@@ -1,0 +1,27 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "## Test##",
+  "steps": [
+    {
+      "file": "packages/react-reconciler/src/ReactFiber.old.js",
+      "description": "开始",
+      "line": 116,
+      "selection": {
+        "start": {
+          "line": 116,
+          "character": 1
+        },
+        "end": {
+          "line": 117,
+          "character": 1
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.old.js",
+      "description": "## Diff 入口函数  主要是在render BeginWork.js阶段调用， 主要逻辑就是根据newChild类型调用不用的处理函数\n1. react fragment\n2. object\n3. string 或者nunber\n4. array\n5. 删除没有做对比的对象\n",
+      "line": 1274
+    }
+  ],
+  "ref": "17.0.2"
+}

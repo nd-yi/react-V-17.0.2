@@ -1,0 +1,52 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Hooks实现",
+  "steps": [
+    {
+      "file": "packages/react/src/ReactHooks.js",
+      "description": "所有常用hooks 调用api 入口",
+      "line": 25,
+      "selection": {
+        "start": {
+          "line": 83,
+          "character": 22
+        },
+        "end": {
+          "line": 83,
+          "character": 39
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberHooks.new.js",
+      "description": "创建update，将update加入queue.pending中 调用scheduleUpdateOnFiber 然后走render commit过程\n",
+      "line": 1686
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberHooks.new.js",
+      "description": "hooks结构\n",
+      "line": 138
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberHooks.new.js",
+      "description": "这两个变量区别等终于 双缓冲中的current fiber 和 wrokInProgress fiber\nhooks是一个单链表  被存储在fiber 的memoizedState属性上面",
+      "line": 171,
+      "selection": {
+        "start": {
+          "line": 166,
+          "character": 12
+        },
+        "end": {
+          "line": 166,
+          "character": 32
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberHooks.new.js",
+      "description": "区分mount 和  update",
+      "line": 399
+    }
+  ],
+  "ref": "v17.0.2"
+}

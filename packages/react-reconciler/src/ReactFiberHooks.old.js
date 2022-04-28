@@ -779,6 +779,7 @@ function updateReducer<S, I, A>(
   }
 
   const dispatch: Dispatch<A> = (queue.dispatch: any);
+  console.log('===========updateReducer============== ~ hook.memoizedState', hook.memoizedState)
   return [hook.memoizedState, dispatch];
 }
 
@@ -1647,6 +1648,7 @@ function dispatchAction<S, A>(
   queue: UpdateQueue<S, A>,
   action: A,
 ) {
+  console.log('=========dispatchAction=========1======= ~ fiber', fiber)
   if (__DEV__) {
     if (typeof arguments[3] === 'function') {
       console.error(

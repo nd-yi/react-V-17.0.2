@@ -774,6 +774,7 @@ function ChildReconciler(shouldTrackSideEffects) {
     newChildren: Array<*>,
     lanes: Lanes,
   ): Fiber | null {
+    console.log('========================= ~ reconcileChildrenArray ~ newChildren', newChildren)
     // This algorithm can't optimize by searching from both ends since we
     // don't have backpointers on fibers. I'm trying to see how far we can get
     // with that model. If it ends up not being worth the tradeoffs, we can
@@ -1277,6 +1278,8 @@ function ChildReconciler(shouldTrackSideEffects) {
     newChild: any,
     lanes: Lanes,
   ): Fiber | null {
+    console.log('========================= ~ reconcileChildFibers ~ newChild', newChild)
+    console.log('========================= ~ reconcileChildFibers ~ currentFirstChild', currentFirstChild)
     // This function is not recursive.
     // If the top level item is an array, we treat it as a set of children,
     // not as a fragment. Nested arrays on the other hand will be treated as

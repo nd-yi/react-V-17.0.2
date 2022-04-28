@@ -391,10 +391,12 @@ export function listenToNativeEvent(
     target = targetElement;
   }
   const listenerSet = getEventListenerSet(target);
+  console.log('========================= ~ listenerSet', listenerSet, target)
   const listenerSetKey = getListenerSetKey(
     domEventName,
     isCapturePhaseListener,
   );
+  // console.log('========================= ~ listenerSetKey', listenerSetKey)
   // If the listener entry is empty or we should upgrade, then
   // we need to trap an event listener onto the target.
   if (!listenerSet.has(listenerSetKey)) {
@@ -477,6 +479,7 @@ function addTrappedEventListener(
     domEventName,
     eventSystemFlags,
   );
+  console.log('========================= ~ listener', listener)
   // If passive option is not supported, then the event will be
   // active and not passive.
   let isPassiveListener = undefined;

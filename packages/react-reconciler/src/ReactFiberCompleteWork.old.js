@@ -647,8 +647,10 @@ function completeWork(
   workInProgress: Fiber,
   renderLanes: Lanes,
 ): Fiber | null {
+  console.log('==============completeWork=========== ~ renderLanes', renderLanes)
+  console.log('=============completeWork============ ~ workInProgress', workInProgress)
+  console.log('============completeWork============= ~ current', current)
   const newProps = workInProgress.pendingProps;
-
   switch (workInProgress.tag) {
     case IndeterminateComponent:
     case LazyComponent:

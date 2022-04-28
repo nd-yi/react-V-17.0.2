@@ -1,0 +1,97 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "react事件",
+  "steps": [
+    {
+      "file": "packages/react-dom/src/client/ReactDOMRoot.js",
+      "description": "启动过程 绑定事件",
+      "line": 139,
+      "selection": {
+        "start": {
+          "line": 139,
+          "character": 1
+        },
+        "end": {
+          "line": 160,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/events/DOMPluginEventSystem.js",
+      "description": "注册所有react支持的事件类型",
+      "line": 322,
+      "selection": {
+        "start": {
+          "line": 322,
+          "character": 1
+        },
+        "end": {
+          "line": 349,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/events/DOMPluginEventSystem.js",
+      "description": "注册事件监听",
+      "line": 351,
+      "selection": {
+        "start": {
+          "line": 351,
+          "character": 17
+        },
+        "end": {
+          "line": 351,
+          "character": 36
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/events/DOMPluginEventSystem.js",
+      "description": "注册事件监听",
+      "line": 468,
+      "selection": {
+        "start": {
+          "line": 468,
+          "character": 10
+        },
+        "end": {
+          "line": 468,
+          "character": 33
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/events/DOMPluginEventSystem.js",
+      "description": "在注册原生事件的过程中, 需要重点关注一下监听函数, 即listener函数. 它实现了把原生事件派发到react体系之内, 非常关键.",
+      "line": 477,
+      "selection": {
+        "start": {
+          "line": 477,
+          "character": 1
+        },
+        "end": {
+          "line": 481,
+          "character": 5
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/events/ReactDOMEventListener.js",
+      "description": "注册原生事件的过程中, 需要重点关注一下监听函数, 即listener函数. 它实现了把原生事件派发到react体系之内, 非常关键.",
+      "line": 94
+    },
+    {
+      "file": "packages/react-dom/src/events/ReactDOMEventListener.js",
+      "description": "派发事件",
+      "line": 182
+    },
+    {
+      "file": "packages/react-dom/src/events/EventListener.js",
+      "description": "注册原生事件",
+      "line": 10
+    }
+  ],
+  "ref": "17.0.2"
+}

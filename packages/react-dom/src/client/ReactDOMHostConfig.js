@@ -233,6 +233,7 @@ export function prepareForCommit(containerInfo: Container): Object | null {
     }
   }
   ReactBrowserEventEmitterSetEnabled(false);
+  console.log('========================= ~ prepareForCommit ~ activeInstance', activeInstance)
   return activeInstance;
 }
 

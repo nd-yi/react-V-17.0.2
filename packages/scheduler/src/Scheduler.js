@@ -279,6 +279,7 @@ function unstable_wrapCallback(callback) {
   };
 }
 
+
 function unstable_scheduleCallback(priorityLevel, callback, options) {
   var currentTime = getCurrentTime();
 
@@ -358,6 +359,7 @@ function unstable_scheduleCallback(priorityLevel, callback, options) {
     }
   }
 
+  console.log('========================= ~ unstable_scheduleCallback ~ newTask', newTask)
   return newTask;
 }
 

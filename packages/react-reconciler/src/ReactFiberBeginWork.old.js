@@ -3085,6 +3085,7 @@ function beginWork(
   workInProgress: Fiber,
   renderLanes: Lanes,
 ): Fiber | null {
+  console.log('============beginWork============= ~ workInProgress/current', workInProgress, current)
   const updateLanes = workInProgress.lanes;
 
   if (__DEV__) {
@@ -3320,6 +3321,13 @@ function beginWork(
 
   switch (workInProgress.tag) {
     case IndeterminateComponent: {
+      const a = mountIndeterminateComponent(
+        current,
+        workInProgress,
+        workInProgress.type,
+        renderLanes,
+      )
+      console.log('=========88888888888888888888================ ~ a', a)
       return mountIndeterminateComponent(
         current,
         workInProgress,

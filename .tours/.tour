@@ -1,0 +1,152 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "启动",
+  "steps": [
+    {
+      "file": "packages/react-dom/src/client/ReactDOMRoot.js",
+      "description": "Concurrent 模式 启动入口",
+      "line": 171,
+      "selection": {
+        "start": {
+          "line": 180,
+          "character": 14
+        },
+        "end": {
+          "line": 180,
+          "character": 26
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/client/ReactDOMRoot.js",
+      "description": "创建一个fiberRoot对象, 并将其挂载到this._internalRoot之上",
+      "line": 62,
+      "selection": {
+        "start": {
+          "line": 63,
+          "character": 24
+        },
+        "end": {
+          "line": 63,
+          "character": 38
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/client/ReactDOMRoot.js",
+      "description": "1. 创建fiberRoot\n2. 标记dom对象  把dom和fiber对象关联起来",
+      "line": 120,
+      "selection": {
+        "start": {
+          "line": 136,
+          "character": 1
+        },
+        "end": {
+          "line": 136,
+          "character": 47
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberReconciler.old.js",
+      "description": "创建fiberRoot对象",
+      "line": 247,
+      "selection": {
+        "start": {
+          "line": 247,
+          "character": 10
+        },
+        "end": {
+          "line": 247,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberRoot.old.js",
+      "description": "创建了`react`应用的首个`fiber`对象, 称为`HostRootFiber`",
+      "line": 96,
+      "selection": {
+        "start": {
+          "line": 96,
+          "character": 30
+        },
+        "end": {
+          "line": 96,
+          "character": 49
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberRoot.old.js",
+      "description": "这个的作用是啥",
+      "line": 89,
+      "selection": {
+        "start": {
+          "line": 89,
+          "character": 15
+        },
+        "end": {
+          "line": 89,
+          "character": 24
+        }
+      }
+    },
+    {
+      "file": "packages/react-dom/src/client/ReactDOMRoot.js",
+      "description": "调用更新入口",
+      "line": 74,
+      "selection": {
+        "start": {
+          "line": 101,
+          "character": 3
+        },
+        "end": {
+          "line": 101,
+          "character": 18
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberReconciler.new.js",
+      "description": "调用更新入口  通过调用scheduleUpdateOnFiber 进入recoil 的输入阶段  即使挂载阶段也是走这个\n结合Api 这里本质就是调用render 方法 无论是mount  还是update  相应的  这里传入了render的参数 也就是我们将要渲染的jsx\n这就是我们要对比的新对象",
+      "line": 250,
+      "selection": {
+        "start": {
+          "line": 247,
+          "character": 10
+        },
+        "end": {
+          "line": 247,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberReconciler.new.js",
+      "description": "注意 前面往下传递的是FiberRootNode  tag为2 这里通过current获得了 rootFiber \nrootFiber是app的第一个fiber节点 也是根节点  tag 为 3\n这说明后面的遍历是在 rootFiber节点上遍历",
+      "line": 259
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberBeginWork.old.js",
+      "description": "挂载时候  第一次走bebinWork时候会调用这个函数（此时tag是3\n",
+      "line": 1053,
+      "selection": {
+        "start": {
+          "line": 1053,
+          "character": 10
+        },
+        "end": {
+          "line": 1053,
+          "character": 24
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberBeginWork.old.js",
+      "description": "这个组件有点意思  fiber tag是2时候（一般是第二次走beginWork时候）调用 然后相当于得到整个App(需要挂载的根节点)  怎么找到的 我迷惑了",
+      "line": 1352
+    }
+  ],
+  "ref": "v17.0.2"
+}

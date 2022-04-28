@@ -488,7 +488,7 @@ export function requestUpdateLane(fiber: Fiber): Lane {
 
     lane = findUpdateLane(schedulerLanePriority, currentEventWipLanes);
   }
-
+  
   return lane;
 }
 
@@ -519,6 +519,7 @@ export function scheduleUpdateOnFiber(
   lane: Lane,
   eventTime: number,
 ) {
+  console.log('===============scheduleUpdateOnFiber========== ~ fiber', fiber)
   checkForNestedUpdates();
   warnAboutRenderPhaseUpdatesInDEV(fiber);
 
@@ -839,6 +840,7 @@ function performConcurrentWorkOnRoot(root) {
 }
 
 function finishConcurrentRender(root, exitStatus, lanes) {
+  console.log('========================= ~ finishConcurrentRender ~ lanes', root, exitStatus, lanes)
   switch (exitStatus) {
     case RootIncomplete:
     case RootFatalErrored: {
@@ -1668,6 +1670,7 @@ function performUnitOfWork(unitOfWork: Fiber): void {
 }
 
 function completeUnitOfWork(unitOfWork: Fiber): void {
+  console.log('========================= ~ completeUnitOfWork ~ unitOfWork', unitOfWork)
   // Attempt to complete the current unit of work, then move to the next
   // sibling. If there are no more siblings, return to the parent fiber.
   let completedWork = unitOfWork;
@@ -2298,6 +2301,7 @@ function commitBeforeMutationEffects() {
     nextEffect = nextEffect.nextEffect;
   }
 }
+
 
 function commitMutationEffects(
   root: FiberRoot,

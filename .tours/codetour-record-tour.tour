@@ -1,0 +1,137 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "CodeTour: Record Tour",
+  "steps": [
+    {
+      "file": "packages/react-reconciler/src/ReactFiberRoot.old.js",
+      "description": "这里能比较好的展示fiber节点属性合集",
+      "line": 29
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberLane.js",
+      "description": "优先级Lane模型",
+      "line": 74
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberLane.js",
+      "description": "fiber优先级 与调度的优先级之间转化",
+      "line": 196
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberReconciler.old.js",
+      "description": "构建fiber节点",
+      "line": 247,
+      "selection": {
+        "start": {
+          "line": 247,
+          "character": 10
+        },
+        "end": {
+          "line": 247,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "通过调度更新fiber",
+      "line": 517
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "同步更新 不需要调度",
+      "line": 564,
+      "selection": {
+        "start": {
+          "line": 564,
+          "character": 16
+        },
+        "end": {
+          "line": 564,
+          "character": 24
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "Concurrent模式的入口",
+      "line": 740,
+      "selection": {
+        "start": {
+          "line": 738,
+          "character": 16
+        },
+        "end": {
+          "line": 738,
+          "character": 21
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "同步任务",
+      "line": 965,
+      "selection": {
+        "start": {
+          "line": 965,
+          "character": 10
+        },
+        "end": {
+          "line": 965,
+          "character": 31
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "开启fiber的  render  commit 过程",
+      "line": 1642,
+      "selection": {
+        "start": {
+          "line": 1642,
+          "character": 10
+        },
+        "end": {
+          "line": 1642,
+          "character": 27
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactFiberWorkLoop.old.js",
+      "description": "fiber  commit",
+      "line": 1879,
+      "selection": {
+        "start": {
+          "line": 1879,
+          "character": 10
+        },
+        "end": {
+          "line": 1879,
+          "character": 20
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactInternalTypes.js",
+      "description": "fiber 节点类型定义",
+      "line": 48,
+      "selection": {
+        "start": {
+          "line": 176,
+          "character": 6
+        },
+        "end": {
+          "line": 176,
+          "character": 29
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactTypeOfMode.js",
+      "description": "启动模式",
+      "line": 14
+    }
+  ],
+  "ref": "v17.0.2"
+}

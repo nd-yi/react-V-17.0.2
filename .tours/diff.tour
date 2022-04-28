@@ -1,0 +1,112 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "diff算法",
+  "steps": [
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## Diff 入口函数  主要是在render BeginWork.js阶段调用， 主要逻辑就是根据newChild类型调用不用的处理函数\n> 这里还有一个有意思的点  比对的是react对象（react 对象， dom对象， fiber对象三者之间关系要理解)\n1. react fragment\n2. object\n3. string 或者nunber\n4. array\n5. 删除没有做对比的对象",
+      "line": 1267
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## 单节点比较\n1. 判断节点是否存在， 然后判断先判断key  再判断type是否都相同，如果都相同，可以复用\n2. 其他情况都不能复用 移除节点",
+      "line": 1128,
+      "selection": {
+        "start": {
+          "line": 1128,
+          "character": 12
+        },
+        "end": {
+          "line": 1128,
+          "character": 34
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "先比较key  再比较type  只有key 和type同时相同才复用fiber节点\n\n啥时候会key相同 type 不同呢？\n\n```js\n// before\n<div key=\"key1\">test</div>\n\n// after\n<p key=\"key1\">test</p>\n\n\n```",
+      "line": 1183,
+      "selection": {
+        "start": {
+          "line": 1197,
+          "character": 22
+        },
+        "end": {
+          "line": 1197,
+          "character": 30
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "key移除老的fiber节点  后面创建新的代替",
+      "line": 1206,
+      "selection": {
+        "start": {
+          "line": 1206,
+          "character": 9
+        },
+        "end": {
+          "line": 1206,
+          "character": 20
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## 多节点diff ",
+      "line": 764,
+      "selection": {
+        "start": {
+          "line": 1267,
+          "character": 12
+        },
+        "end": {
+          "line": 1267,
+          "character": 32
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## 第一轮遍历比较（遍历newChild)\n1. 第一个轮遍历是通过updateSlot函数来比较 不能复用就返回null （害得我还以为这是在哪比较）然后直接退出当前循环 进入后面的判断",
+      "line": 812
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## 第一轮遍历结束的判断，三种结果\n1. oldFiber遍历完\n2. newChild遍历完\n3. 都没有便利完（那就需要第二轮遍历）",
+      "line": 850
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "## 第二轮遍历（为什么可以说第二轮遍历意味着是节点交换了位置）",
+      "line": 880,
+      "selection": {
+        "start": {
+          "line": 856,
+          "character": 9
+        },
+        "end": {
+          "line": 856,
+          "character": 17
+        }
+      }
+    },
+    {
+      "file": "packages/react-reconciler/src/ReactChildFiber.new.js",
+      "description": "通过这个来确定是否交换位置",
+      "line": 812,
+      "selection": {
+        "start": {
+          "line": 812,
+          "character": 24
+        },
+        "end": {
+          "line": 812,
+          "character": 34
+        }
+      }
+    }
+  ],
+  "ref": "v17.0.2"
+}

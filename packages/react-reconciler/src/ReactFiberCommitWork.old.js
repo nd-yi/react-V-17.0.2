@@ -1191,6 +1191,7 @@ function commitPlacement(finishedWork: Fiber): void {
   }
 
   const before = getHostSibling(finishedWork);
+  console.log('========= ~ commitPlacement ~ parentFiber/finishedWork/before/isContainer', parentFiber, finishedWork, before, isContainer)
   // We only have the top Fiber that was inserted but we need to recurse down its
   // children to find all the terminal nodes.
   if (isContainer) {
